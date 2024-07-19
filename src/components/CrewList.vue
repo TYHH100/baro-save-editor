@@ -1,7 +1,7 @@
 <template>
   <v-card elevation="1" class="pb-2">
     <v-card-header class="flex-column align-center">
-      <v-card-title>{{ isMultiPlayer ? 'Hired Bots' : 'Current Crew' }}</v-card-title>
+      <v-card-title>{{ isMultiPlayer ? 'Hired Bots' : '拥有的船员' }}</v-card-title>
     </v-card-header>
     <v-sheet class="mb-2" id="crewListWrapper">
       <v-sheet
@@ -12,10 +12,10 @@
         <div class="name">{{ el.attributes.name }}</div>
         <v-spacer></v-spacer>
         <v-icon style="cursor: grabbing" class="grabHandle" color="secondary">mdi-drag-horizontal-variant</v-icon>
-        <v-icon title="Edit character" color="secondary" class="iconButton" @click="editChar(el)">
+        <v-icon title="编辑船员" color="secondary" class="iconButton" @click="editChar(el)">
           mdi-file-edit-outline
         </v-icon>
-        <v-icon title="Delete character" color="red" class="iconButton" @click="deleteChar(el)">
+        <v-icon title="删除船员" color="red" class="iconButton" @click="deleteChar(el)">
           mdi-delete-outline
         </v-icon>
       </v-sheet>
@@ -24,7 +24,7 @@
       <v-btn v-if="canExportPlayers" title="Export player characters" icon size="x-small" @click="exportPlayers">
         <v-icon color="secondary">mdi-file-download-outline</v-icon>
       </v-btn>
-      <div class="pt-1">Add:</div>
+      <div class="pt-1">添加:</div>
       <v-spacer></v-spacer>
       <v-btn title="Add new assistant character" icon size="x-small" @click="addNew">
         <v-icon color="secondary">mdi-account-plus-outline</v-icon>
@@ -259,7 +259,7 @@ export default {
       this.crewList.elements.splice(index, 1)
       this.$store.dispatch('showAlert', {
         type: 'success',
-        text: `Removed ${el.attributes.name} from the crew.`,
+        text: `已删除 ${el.attributes.name} 船员.`,
       })
     },
     async copyChar() {

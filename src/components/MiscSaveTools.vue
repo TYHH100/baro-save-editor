@@ -1,7 +1,7 @@
 <template>
   <v-card elevation="1" class="pb-2">
     <v-card-header class="flex-column align-center">
-      <v-card-title> Misc Tools </v-card-title>
+      <v-card-title> 杂项工具 </v-card-title>
     </v-card-header>
     <v-sheet class="d-flex flex-column align-center">
       <!-- gamesession.xml edit / download -->
@@ -41,7 +41,7 @@
         </v-dialog>
       </div>
       <!-- convert format -->
-      <h3 class="toolTitle">Save conversion</h3>
+      <h3 class="toolTitle">Save 转换</h3>
       <div class="toolContent d-flex flex-row justify-space-between align-center px-2 mb-8">
         <div class="text">
           Convert to a <span class="text-primary">{{ isMP ? 'single' : 'multi' }}-player</span> format:

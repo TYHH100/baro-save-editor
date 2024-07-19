@@ -1,7 +1,7 @@
 <template>
   <v-card elevation="1" class="pb-2">
     <v-card-header class="flex-column align-center">
-      <v-card-title> Owned Submarines </v-card-title>
+      <v-card-title> 拥有的潜艇 </v-card-title>
     </v-card-header>
     <v-sheet class="mb-2">
       <v-sheet

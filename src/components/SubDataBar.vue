@@ -2,7 +2,7 @@
   <v-col>
     <v-card elevation="1" class="pr-2">
       <v-btn class="mr-4" :color="blockDownload ? 'surface' : 'secondary'" :disabled="blockDownload" @click="download">
-        Download
+        下载
       </v-btn>
       <v-icon
         size="32"
@@ -14,7 +14,7 @@
         mdi-clipboard-arrow-left-outline
       </v-icon>
       <div class="float-right ma-1">
-        Loaded file: <span class="text-primary">{{ filename }}</span> ,   submarine name:
+        已加载文件: <span class="text-primary">{{ filename }}</span> ,   潜艇名称:
         <span class="text-primary">{{ subname }}</span>
       </div>
     </v-card>
