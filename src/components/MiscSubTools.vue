@@ -1,7 +1,7 @@
 <template>
   <v-card elevation="1" class="pb-2">
     <v-card-header class="flex-column align-center">
-      <v-card-title> Misc Tools </v-card-title>
+      <v-card-title> 杂项工具 </v-card-title>
     </v-card-header>
     <v-sheet class="d-flex flex-column align-center">
       <!-- set price -->

@@ -1,14 +1,14 @@
 <template>
   <v-card class="pa-4" elevation="1">
     <div class="d-flex flex-row align-center justify-center mb-1">
-      <div class="h3 mb-1">Drag a file below to load it:</div>
+      <div class="h3 mb-1">将文件拖到虚线框里,进行加载↓</div>
       <v-spacer></v-spacer>
       <!-- file path guess -->
       <div v-if="fromSubEditor" class="text-center">
-        Your submarine files are inside your <span class="text-primary">Barotrauma installation directory</span>
+        您的 sub 文件在 <span class="text-primary">Barotrauma 安装目录</span>
       </div>
       <div v-else class="text-center">
-        Your save files should be in <span class="text-primary">{{ saveLocation }}</span>
+        您的 save 文件位置 <span class="text-primary">{{ saveLocation }}</span>
       </div>
       <!-- locate file dialog -->
       <v-btn @click.stop="fileLocDialog = true" size="x-small" icon>

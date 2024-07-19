@@ -35,22 +35,22 @@ export default {
       navLinks: [
         {
           name: 'SaveTools',
-          label: 'Save Editor',
+          label: '存档编辑器',
           url: '/',
         },
         {
           name: 'SubTools',
-          label: 'Submarine Editor',
+          label: '潜艇编辑器',
           url: '/SubTools',
         },
         {
           name: 'Decompressor',
-          label: 'Save Decompressor',
+          label: '存档解压缩',
           url: '/Decompressor',
         },
         {
           name: 'About',
-          label: 'About',
+          label: '关于',
           url: '/About',
         },
       ],

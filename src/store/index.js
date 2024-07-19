@@ -274,7 +274,7 @@ export default createStore({
         // show alert
         dispatch('showAlert', {
           type: 'success',
-          text: `Converted savefile to single-player format.`,
+          text: `存档文件转换为 单人 存档.`,
         })
       }
       // SP to MP conversion
@@ -294,7 +294,7 @@ export default createStore({
         // show alert
         dispatch('showAlert', {
           type: 'success',
-          text: `Converted savefile to multi-player format.`,
+          text: `存档文件转换为 多人 存档.`,
         })
       }
       commit('SET_LOADING', false)
