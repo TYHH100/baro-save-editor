@@ -7,7 +7,7 @@ const routes = [
     name: 'SaveTools',
     component: () => import('../views/SaveTools.vue'),
     meta: {
-      title: 'Barotrauma Save Editor',
+      title: '潜渊症存档编辑器',
       keywords: 'barotrauma, save editor, save, editor, submarine, decompressor',
       desc: 'Online save and submarine editing tools for Barotrauma. Edit owned submarines, the crew, convert between single-player and multi-player formats, adjust campaign settings. Also includes some submarine editing tools and save decompressor.',
     },
@@ -29,7 +29,7 @@ const routes = [
     name: 'SubTools',
     component: () => import('../views/SubTools.vue'),
     meta: {
-      title: 'Barotrauma Submarine Editor',
+      title: '潜渊症潜艇编辑器',
       keywords: 'barotrauma, submarine editor, submarine, editor, tools',
       desc: 'Online submarine tools for Barotrauma. Extract shuttles, preview image, mass hide wires, change price or clean wall stains.',
     },
@@ -39,7 +39,7 @@ const routes = [
     name: 'Decompressor',
     component: () => import('../views/Decompressor.vue'),
     meta: {
-      title: 'Barotrauma Save Decompressor',
+      title: '潜渊症存档解压缩',
       keywords: 'barotrauma, save, decompressor, compressor',
       desc: 'Online save compressor and decompressor for Barotrauma. Uses experimental file system API: might not work on some browsers and can only access files in specific locations.',
     },
@@ -49,7 +49,7 @@ const routes = [
     name: 'About',
     component: () => import('../views/About.vue'),
     meta: {
-      title: 'About This App',
+      title: '关于这个App',
       keywords: 'barotrauma, save editor, save, editor, submarine, decompressor',
       desc: 'Online save and submarine editing tools for Barotrauma. Edit owned submarines, the crew, convert between single-player and multi-player formats, adjust campaign settings. Also includes some submarine editing tools and save decompressor.',
     },

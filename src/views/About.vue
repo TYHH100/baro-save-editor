@@ -31,7 +31,8 @@
           <a style="color: rgb(var(--v-theme-secondary))" href="https://github.com/ignis05/baro-save-editor/issues">
             github issue
           </a>
-          attaching original file(s) and providing steps for reproduction.
+          attaching original file(s) and providing steps for reproduction.<br/>
+          翻译 by TYHH10 如果有翻译问题，切勿到原作者那边提问.
         </v-sheet>
       </v-col>
     </v-row>
