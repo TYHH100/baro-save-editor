@@ -5,9 +5,9 @@
       <v-col>
         <v-card>
           <v-card-text style="opacity: 1">
-            <div class="text-white text-center text-h5">Simple save decompression and compression tools.</div>
+            <div class="text-white text-center text-h5">简单的存档解压缩工具.</div>
             <div class="text-center d-flex flex-row justify-center align-center">
-              Your save files should be in <span class="text-primary ml-2">{{ saveLocation }}</span>
+              您的 save 文件位置 <span class="text-primary ml-2">{{ saveLocation }}</span>
               <div>
                 <v-icon @click="copyPath" color="secondary" class="iconButton ml-3"> mdi-clipboard-outline </v-icon>
                 <v-tooltip anchor="bottom" activator="parent">Copy path to clipboard</v-tooltip>
