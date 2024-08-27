@@ -5,7 +5,7 @@
         下载
       </v-btn>
       <div class="float-right ma-1">
-        已加载文件: <span class="text-primary">{{ filename }}</span> , Save 日期/时间:
+        已加载文件: <span class="text-primary">{{ filename }}</span> , 存档日期/时间:
         <span class="text-primary">{{ modificationDate }}</span>
       </div>
     </v-card>

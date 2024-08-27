@@ -23,7 +23,7 @@
         <v-dialog class="fullscreen" v-model="gameses.dialog.value" fullscreen>
           <v-card class="d-flex flex-column" style="width: 100%; height: 100%">
             <v-card-title>
-              <span class="text-h5">Manualy edit gamesession.xml</span>
+              <span class="text-h5">编辑 gamesession.xml</span>
             </v-card-title>
             <v-card-text class="d-flex flex-grow-1">
               <textarea
@@ -34,8 +34,8 @@
             </v-card-text>
             <v-card-actions style="flex: 0 1 auto">
               <v-spacer></v-spacer>
-              <v-btn color="red darken-1" text @click="gameses.closeDialog()"> Cancel </v-btn>
-              <v-btn color="green darken-1" text @click="gameses.saveChanges()"> Save </v-btn>
+              <v-btn color="red darken-1" text @click="gameses.closeDialog()"> 取消 </v-btn>
+              <v-btn color="green darken-1" text @click="gameses.saveChanges()"> 保存 </v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -44,7 +44,7 @@
       <h3 class="toolTitle">Save 转换</h3>
       <div class="toolContent d-flex flex-row justify-space-between align-center px-2 mb-8">
         <div class="text">
-          Convert to a <span class="text-primary">{{ isMP ? 'single' : 'multi' }}-player</span> format:
+          转换为 <span class="text-primary">{{ isMP ? '单人' : '多人' }}-游戏</span> 格式:
         </div>
         <v-spacer></v-spacer>
         <v-btn title="Convert" @click="convert.click" size="x-small" icon>
@@ -133,7 +133,7 @@
           color="secondary"
           class="py-5"
         >
-          SET
+          应用
         </v-btn>
       </div>
     </v-sheet>

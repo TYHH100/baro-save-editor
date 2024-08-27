@@ -10,7 +10,7 @@
         class="d-flex flex-row justify-center px-4"
       >
         <input
-          title="Set as currently used"
+          title="设置当前存档使用潜艇"
           class="selectedSub"
           type="radio"
           name="selectedOwnedSub"
@@ -19,13 +19,13 @@
         />
         <div class="subname">{{ sub }}</div>
         <v-spacer></v-spacer>
-        <v-icon title="Download submarine file" color="secondary" class="iconButton" @click="downloadSub(sub)">
+        <v-icon title="下载潜艇文件" color="secondary" class="iconButton" @click="downloadSub(sub)">
           mdi-file-download-outline
         </v-icon>
-        <v-icon title="Edit submarine" color="secondary" class="iconButton" @click="editSub(sub)">
+        <v-icon title="编辑潜艇" color="secondary" class="iconButton" @click="editSub(sub)">
           mdi-clipboard-arrow-right-outline
         </v-icon>
-        <v-icon title="Delete submarine" color="red" class="iconButton" @click="deleteSub(sub)">
+        <v-icon title="删除潜艇" color="red" class="iconButton" @click="deleteSub(sub)">
           mdi-delete-outline
         </v-icon>
       </v-sheet>
@@ -60,14 +60,14 @@ export default {
       if (index === -1) {
         this.$store.dispatch('showAlert', {
           type: 'error',
-          text: `Failed to delete ${subName} - not found in ownedSubmarines.`,
+          text: `无法删除 (${subName}) - 在拥有的潜艇中无法找到.`,
         })
         return console.error(`Failed to delete ${subName} - not found in ownedSubmarines`)
       }
       this.ownedSubList.splice(index, 1)
       this.$store.dispatch('showAlert', {
         type: 'success',
-        text: `Removed "${subName}" from the owned submarines and "${subFilename}" file from the savefile.`,
+        text: `在拥有的潜艇中删除了 (${subName}),在存档文件中删除了 (${subFilename}) 文件.`,
       })
     },
     downloadSub(subName) {
@@ -96,7 +96,7 @@ export default {
       this.$store.state.gamesession.elements[0].attributes.submarine = subName
       this.$store.dispatch('showAlert', {
         type: 'success',
-        text: `Set current submarine to ${subName}.`,
+        text: `当前存档使用潜艇更改为 (${subName}).`,
       })
     },
   },

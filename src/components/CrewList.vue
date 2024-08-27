@@ -1,7 +1,7 @@
 <template>
   <v-card elevation="1" class="pb-2">
     <v-card-header class="flex-column align-center">
-      <v-card-title>{{ isMultiPlayer ? 'Hired Bots' : '拥有的船员' }}</v-card-title>
+      <v-card-title>{{ isMultiPlayer ? '拥有的船员' : '拥有的船员' }}</v-card-title>
     </v-card-header>
     <v-sheet class="mb-2" id="crewListWrapper">
       <v-sheet
