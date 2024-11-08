@@ -29,7 +29,7 @@ const routes = [
     name: 'SubTools',
     component: () => import('../views/SubTools.vue'),
     meta: {
-      title: '潜渊症潜艇编辑器',
+      title: '潜渊症潜艇工具',
       keywords: 'barotrauma, submarine editor, submarine, editor, tools',
       desc: 'Online submarine tools for Barotrauma. Extract shuttles, preview image, mass hide wires, change price or clean wall stains.',
     },

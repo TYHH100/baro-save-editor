@@ -40,12 +40,12 @@ export default {
       if (count > 0)
         this.$store.dispatch('showAlert', {
           type: 'success',
-          text: `Set ${count} wires to ${setToBool ? 'hidden' : 'visible'}`,
+          text: `${count} 个导线设置为 ${setToBool ? '隐藏' : '可见'}`,
         })
       else
         this.$store.dispatch('showAlert', {
           type: 'info',
-          text: `All wires of that type were already set to ${setToBool ? 'hidden' : 'visible'}`,
+          text: `当前导线已经设置为 ${setToBool ? '隐藏' : '可见'}`,
         })
     },
     unhideWires() {

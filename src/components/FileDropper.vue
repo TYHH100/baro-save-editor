@@ -13,7 +13,7 @@
       <!-- locate file dialog -->
       <v-btn @click.stop="fileLocDialog = true" size="x-small" icon>
         <v-icon>mdi-file-find-outline</v-icon>
-        <v-tooltip anchor="bottom" activator="parent">Where can I find my files?</v-tooltip>
+        <v-tooltip anchor="bottom" activator="parent">我在哪里可以找到这个文件?</v-tooltip>
       </v-btn>
       <v-dialog class="filedropper" v-model="fileLocDialog">
         <v-card>
@@ -77,7 +77,7 @@
       <!-- help dialog -->
       <v-btn @click.stop="helpDialog = true" size="x-small" icon>
         <v-icon>mdi-help-circle-outline</v-icon>
-        <v-tooltip anchor="bottom" activator="parent">What files can I load?</v-tooltip>
+        <v-tooltip anchor="bottom" activator="parent">我可以加载哪些文件?</v-tooltip>
       </v-btn>
       <v-dialog class="filedropper" v-model="helpDialog">
         <v-card>

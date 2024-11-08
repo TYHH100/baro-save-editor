@@ -6,7 +6,7 @@
       </v-btn>
       <v-icon
         size="32"
-        title="load to savefile"
+        title="添加到存档文件中"
         :color="buttonActive ? 'secondary' : 'grey'"
         :class="{ iconButton: buttonActive }"
         @click="pushToSaveEditor"

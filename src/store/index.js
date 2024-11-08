@@ -202,7 +202,7 @@ export default createStore({
         } else {
           dispatch('showAlert', {
             type: 'success',
-            text: `Updated owned submarine file "${file.name}"`,
+            text: `已更新拥有的潜艇 "${file.name}" 文件`,
           })
         }
         commit('ADD_SUBFILE', { name: file.name, data: subObject })

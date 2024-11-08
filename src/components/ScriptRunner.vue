@@ -5,7 +5,7 @@
     </v-card-header>
     <v-sheet class="mb-2 d-flex flex-column justify-center align-center px-4">
       <textarea v-model="areaText" spellcheck="false" class="textArea px-2 mx-0"></textarea>
-      <v-btn class="mt-4" color="secondary" variant="outlined" @click="run" :disabled="areaText == ''">Run</v-btn>
+      <v-btn class="mt-4" color="secondary" variant="outlined" @click="run" :disabled="areaText == ''">运行</v-btn>
     </v-sheet>
   </v-card>
 </template>
@@ -24,7 +24,7 @@ export default {
       eval(this.areaText)
       this.$store.dispatch('showAlert', {
         type: 'success',
-        text: `Succesfully executed script`,
+        text: `成功运行脚本`,
       })
     },
   },

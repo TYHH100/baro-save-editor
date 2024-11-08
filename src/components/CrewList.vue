@@ -26,15 +26,15 @@
       </v-btn>
       <div class="pt-1">添加:</div>
       <v-spacer></v-spacer>
-      <v-btn title="Add new assistant character" icon size="x-small" @click="addNew">
+      <v-btn title="添加一个新的助手船员" icon size="x-small" @click="addNew">
         <v-icon color="secondary">mdi-account-plus-outline</v-icon>
       </v-btn>
-      <v-btn title="Add character from xml" icon size="x-small" @click="addCharDialog = true">
+      <v-btn title="从 xml 添加船员" icon size="x-small" @click="addCharDialog = true">
         <v-icon color="secondary">mdi-account-edit-outline</v-icon>
         <v-dialog class="editCharacter" v-model="addCharDialog">
           <v-card class="d-flex flex-column" style="width: 100%; height: 100%">
             <v-card-title>
-              <span class="text-h5">Add character from xml</span>
+              <span class="text-h5">从 xml 添加船员</span>
             </v-card-title>
             <v-card-text class="d-flex flex-grow-1">
               <textarea
@@ -45,13 +45,13 @@
             </v-card-text>
             <v-card-actions style="flex: 0 1 auto">
               <v-spacer></v-spacer>
-              <v-btn color="red darken-1" text @click="addCharDialog = false"> Cancel </v-btn>
-              <v-btn color="green darken-1" text @click="addFromInput"> Add </v-btn>
+              <v-btn color="red darken-1" text @click="addCharDialog = false"> 取消 </v-btn>
+              <v-btn color="green darken-1" text @click="addFromInput"> 添加 </v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
       </v-btn>
-      <v-btn title="Paste character xml from clipboard" icon size="x-small" @click="addFromClip">
+      <v-btn title="从剪切板读取船员xml" icon size="x-small" @click="addFromClip">
         <v-icon color="secondary">mdi-clipboard-arrow-up-outline</v-icon>
       </v-btn>
     </v-sheet>
@@ -60,7 +60,7 @@
     <v-card class="d-flex flex-column mainCard" style="width: 100%; height: 100%">
       <v-card-title style="background-color: rgb(var(--v-theme-primary))">
         <span class="text-h4"
-          >编辑 <span class="text-black">{{ charClone?.attributes?.name }}</span></span
+          >编辑:<span class="text-black">{{ charClone?.attributes?.name }}</span></span
         >
       </v-card-title>
       <v-card-text v-if="charClone" class="d-flex flex-grow-1">
@@ -83,13 +83,13 @@
                 </div>
                 <div>
                   <div class="text-h5">Raw xml:</div>
-                  <v-btn title="Copy character xml to clipboard" size="x-small" icon @click="copyChar">
+                  <v-btn title="复制船员xml到剪贴板" size="x-small" icon @click="copyChar">
                     <v-icon color="secondary">mdi-clipboard-arrow-down-outline</v-icon>
                   </v-btn>
-                  <v-btn title="Paste character xml from clipboard" size="x-small" icon @click="pasteChar">
+                  <v-btn title="从剪切板读取船员xml" size="x-small" icon @click="pasteChar">
                     <v-icon color="secondary">mdi-clipboard-arrow-up-outline</v-icon>
                   </v-btn>
-                  <v-btn title="Edit raw xml" size="x-small" icon @click="rawEditChar">
+                  <v-btn title="编辑xml" size="x-small" icon @click="rawEditChar">
                     <v-icon color="secondary">mdi-file-edit-outline</v-icon>
                   </v-btn>
                 </div>
@@ -264,7 +264,7 @@ export default {
       this.selectedChar = null
       this.$store.dispatch('showAlert', {
         type: 'success',
-        text: `Modified character ${this.charClone.attributes.name}`,
+        text: `修改船员: ${this.charClone.attributes.name}`,
       })
       this.charClone = null
     },

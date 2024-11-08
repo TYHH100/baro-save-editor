@@ -3,11 +3,11 @@
     <v-col>
       <v-sheet elevation="1" class="buttonWrapper">
         <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'export'">
-          Export from file
+          文件导出
         </v-btn>
-        <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'wirehider'">Wire Hider</v-btn>
-        <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'script'">Run Script</v-btn>
-        <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'misc'">Misc Tools</v-btn>
+        <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'wirehider'">导线隐藏</v-btn>
+        <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'script'">运行脚本</v-btn>
+        <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'misc'">杂项工具</v-btn>
       </v-sheet>
     </v-col>
   </v-row>
@@ -16,7 +16,7 @@
       <!-- export -->
       <v-card v-if="selectedComp === 'export'" elevation="1" class="aboutCard">
         <v-card-header>
-          <v-card-title class="text-h4">Export from file</v-card-title>
+          <v-card-title class="text-h4">文件导出</v-card-title>
         </v-card-header>
         <v-card-text>
           <span class="text-h6">Allows to export preview image or shuttles from the submarine file.</span><br /><br />

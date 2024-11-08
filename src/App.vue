@@ -40,7 +40,7 @@ export default {
         },
         {
           name: 'SubTools',
-          label: '潜艇编辑器',
+          label: '潜艇工具',
           url: '/SubTools',
         },
         {

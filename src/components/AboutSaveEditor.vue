@@ -3,13 +3,13 @@
     <v-col>
       <v-sheet elevation="1" class="buttonWrapper">
         <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'ownedSubs'">
-          Owned Submarines
+          拥有的潜艇
         </v-btn>
         <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'campSettings'">
-          Campaign Settings
+          战役设置
         </v-btn>
-        <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'crew'"> Crew </v-btn>
-        <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'misc'"> Misc Tools </v-btn>
+        <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'crew'"> 拥有的船员 </v-btn>
+        <v-btn color="secondary" variant="outlined" class="mx-2" @click="selectedComp = 'misc'"> 杂项工具 </v-btn>
       </v-sheet>
     </v-col>
   </v-row>
@@ -18,7 +18,7 @@
       <!-- owned submarines -->
       <v-card v-if="selectedComp === 'ownedSubs'" elevation="1" class="aboutCard">
         <v-card-header>
-          <v-card-title class="text-h4">Owned Submarines</v-card-title>
+          <v-card-title class="text-h4">拥有的潜艇</v-card-title>
         </v-card-header>
         <v-card-text>
           <span class="text-h6">Displays a list of currently owned submarines.</span><br /><br />
@@ -46,7 +46,7 @@
       <!-- campaign settings -->
       <v-card v-if="selectedComp === 'campSettings'" elevation="1" class="aboutCard">
         <v-card-header>
-          <v-card-title class="text-h4">Campaign Settings</v-card-title>
+          <v-card-title class="text-h4">战役设置</v-card-title>
         </v-card-header>
         <v-card-text>
           <span class="text-h6"> Max Missions </span><br />
@@ -71,7 +71,7 @@
       <!-- crew -->
       <v-card v-if="selectedComp === 'crew'" elevation="1" class="aboutCard">
         <v-card-header>
-          <v-card-title class="text-h4">Crew / Bots</v-card-title>
+          <v-card-title class="text-h4">船员 / 机器人</v-card-title>
         </v-card-header>
         <v-card-text>
           <span class="text-h6">
@@ -118,7 +118,7 @@
       <!-- misc -->
       <v-card v-if="selectedComp === 'misc'" elevation="1" class="aboutCard">
         <v-card-header>
-          <v-card-title class="text-h4">Miscellaneous tools</v-card-title>
+          <v-card-title class="text-h4">杂项工具</v-card-title>
         </v-card-header>
         <v-card-text>
           <span class="text-h6"> Gamesession.xml tools </span>

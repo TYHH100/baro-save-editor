@@ -10,9 +10,9 @@
         class="d-flex flex-row justify-center align-center mt-2 px-4"
         style="width: 100%"
       >
-        <div class="d-flex flex-row justify-center align-center">预览图片</div>
+        <div class="d-flex flex-row justify-center align-center">潜艇的预览图片</div>
         <v-spacer></v-spacer>
-        <v-icon title="Download" class="iconButton" color="secondary" @click="downloadImage()">
+        <v-icon title="下载" class="iconButton" color="secondary" @click="downloadImage()">
           mdi-file-download-outline
         </v-icon>
       </v-sheet>
@@ -25,7 +25,7 @@
       >
         <div class="d-flex flex-row justify-center align-center">{{ sub.name }}</div>
         <v-spacer></v-spacer>
-        <v-icon title="Download" class="iconButton" color="secondary" @click="downloadShuttle(sub.object)">
+        <v-icon title="下载" class="iconButton" color="secondary" @click="downloadShuttle(sub.object)">
           mdi-file-download-outline
         </v-icon>
       </v-sheet>

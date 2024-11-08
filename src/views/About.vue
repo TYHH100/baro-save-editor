@@ -4,10 +4,10 @@
       <v-col>
         <v-sheet elevation="1" class="buttonWrapper">
           <v-btn :class="{ 'text-black': !subEditor }" color="secondary" class="mx-2" @click="subEditor = false">
-            About Save Editor
+            关于存档编辑器
           </v-btn>
           <v-btn :class="{ 'text-black': subEditor }" color="secondary" class="mx-2" @click="subEditor = true">
-            About Submarine Editor
+            关于潜艇工具
           </v-btn>
         </v-sheet>
       </v-col>
@@ -16,7 +16,7 @@
       <v-col>
         <v-sheet elevation="1" class="pa-2" style="text-align: center">
           <b>
-            Note: Always back up the original file before replacing it with the downloaded one.<br />
+            注意:下载文件后如果要替换,请备份原文件以防万一<br />
             Even if something had worked for you before, there is always a risk that a game update breaks some stuff.
           </b>
         </v-sheet>

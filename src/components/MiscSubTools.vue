@@ -8,7 +8,7 @@
       <div class="toolContent d-flex flex-row justify-space-between align-center px-2">
         <v-text-field
           density="comfortable"
-          label="Change Price"
+          label="更改价格"
           variant="outlined"
           style="color: white; min-width: 140px"
           v-model="price.inputVal.value"
@@ -23,27 +23,27 @@
           color="secondary"
           class="py-5"
         >
-          SET
+          应用
         </v-btn>
       </div>
       <!-- clean walls -->
-      <h3 class="toolTitle">Clean walls</h3>
+      <h3 class="toolTitle">清理墙壁</h3>
       <div class="toolContent d-flex flex-row justify-flex-start align-center px-2" style="width: 100%">
         <input style="width: auto" type="checkbox" v-model="wallClean.checkBoxVal.value" />
-        <div class="mx-2">Include shuttles</div>
+        <div class="mx-2">包括穿梭艇</div>
         <v-spacer></v-spacer>
-        <v-btn variant="outlined" @click="wallClean.click" color="secondary"> CLEAN </v-btn>
+        <v-btn variant="outlined" @click="wallClean.click" color="secondary"> 清理 </v-btn>
       </div>
       <!-- compact submarine -->
       <h3 class="toolTitle">
-        Compact sub
-        <v-btn class="ml-2" @click.stop="compact.dialog.value = true" size="x-small" icon title="Info">
+        Compact 潜艇
+        <v-btn class="ml-2" @click.stop="compact.dialog.value = true" size="x-small" icon title="信息">
           <v-icon>mdi-help-circle-outline</v-icon>
         </v-btn>
         <v-dialog class="subCompactor" v-model="compact.dialog.value">
           <v-card>
             <v-card-title>
-              <span class="text-h5">"Compact" submarine tool</span>
+              <span class="text-h5">"Compact" 潜艇工具</span>
               <v-spacer></v-spacer>
               <v-btn color="red" size="x-small" icon @click="compact.dialog.value = false">
                 <v-icon>mdi-close-thick</v-icon>
@@ -72,7 +72,7 @@
           color="secondary"
           :title="compact.linkedSubs.value.length === 0 ? 'No shuttles found' : 'Compact attached shuttles'"
         >
-          Shuttles
+          穿梭艇
         </v-btn>
         <v-btn
           variant="outlined"
@@ -81,7 +81,7 @@
           color="secondary"
           :title="compact.previewImage.value === '' ? 'No preview image found' : 'Compact main submarine'"
         >
-          Sub
+          潜艇
         </v-btn>
       </div>
     </v-sheet>
@@ -115,7 +115,7 @@ function priceSetup() {
       store.getters.sub.attributes.price = inputVal.value
       store.dispatch('showAlert', {
         type: 'success',
-        text: `Set submarine price to "${inputVal.value}"`,
+        text: `潜艇价格设置为 "${inputVal.value}"`,
       })
     } else
       store.dispatch('showAlert', {

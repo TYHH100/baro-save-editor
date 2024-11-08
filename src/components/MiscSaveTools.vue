@@ -8,16 +8,16 @@
       <div class="d-flex flex-row justify-space-between pr-2 toolContent mb-8" style="width: 100%; max-width: 320px">
         <h3 class="toolTitle d-block">Gamesession.xml</h3>
         <v-spacer></v-spacer>
-        <v-icon title="Copy to clipboard" color="secondary" class="iconButton" @click="gameses.copy()">
+        <v-icon title="复制到剪贴板" color="secondary" class="iconButton" @click="gameses.copy()">
           mdi-clipboard-arrow-down-outline
         </v-icon>
-        <v-icon title="Paste from clipboard" color="secondary" class="iconButton" @click="gameses.paste()">
+        <v-icon title="从剪切板中读取" color="secondary" class="iconButton" @click="gameses.paste()">
           mdi-clipboard-arrow-up-outline
         </v-icon>
-        <v-icon title="Download" color="secondary" class="iconButton" @click="gameses.download()">
+        <v-icon title="下载" color="secondary" class="iconButton" @click="gameses.download()">
           mdi-file-download-outline
         </v-icon>
-        <v-icon title="Edit xml" color="secondary" class="iconButton" @click.stop="gameses.edit()">
+        <v-icon title="编辑 xml" color="secondary" class="iconButton" @click.stop="gameses.edit()">
           mdi-file-edit-outline
         </v-icon>
         <v-dialog class="fullscreen" v-model="gameses.dialog.value" fullscreen>
@@ -44,22 +44,22 @@
       <h3 class="toolTitle">Save 转换</h3>
       <div class="toolContent d-flex flex-row justify-space-between align-center px-2 mb-8">
         <div class="text">
-          转换为 <span class="text-primary">{{ isMP ? '单人' : '多人' }}-游戏</span> 格式:
+          转换为: <span class="text-primary">{{ isMP ? '单人' : '多人' }}-游戏</span> 格式
         </div>
         <v-spacer></v-spacer>
-        <v-btn title="Convert" @click="convert.click" size="x-small" icon>
+        <v-btn title="转换" @click="convert.click" size="x-small" icon>
           <v-icon color="secondary">mdi-file-sync-outline</v-icon>
         </v-btn>
         <v-btn @click.stop="convert.dialog.value = true" size="x-small" icon>
           <v-icon>mdi-help-circle-outline</v-icon>
-          <v-tooltip anchor="bottom" activator="parent">Savefile format convertion info</v-tooltip>
+          <v-tooltip anchor="bottom" activator="parent">Save文件格式转换信息</v-tooltip>
         </v-btn>
         <!-- info dialog -->
         <v-dialog class="convertInfo" v-model="convert.dialog.value">
           <v-card>
             <v-card-title>
               <span class="text-h5">{{
-                isMP ? 'Multi-player to single-player convertion' : 'Single-player to multi-player convertion'
+                isMP ? '多人游戏到单人游戏的转换' : '单人游戏到多人游戏的转换'
               }}</span>
               <v-spacer></v-spacer>
               <v-btn color="red" size="x-small" icon @click="convert.dialog.value = false">
@@ -288,7 +288,7 @@ function gamesesSetup() {
     await navigator.clipboard.writeText(xmlString)
     store.dispatch('showAlert', {
       type: 'success',
-      text: `Copied gamesession.xml to system clipboard.`,
+      text: `gamesession.xml文件内容已经复制到系统剪切板中.`,
     })
   }
 
@@ -313,7 +313,7 @@ function gamesesSetup() {
       dialog.value = false
       store.dispatch('showAlert', {
         type: 'success',
-        text: `Pasted "gamesession.xml" from clipboard.`,
+        text: `已从剪切板中读取gamesession.xml内容.`,
       })
     } else {
       console.warn(`Failed to find campaign element in new gamesession - aborting`)
