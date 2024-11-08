@@ -36,8 +36,6 @@
               <v-spacer></v-spacer>
               <v-btn color="red darken-1" text @click="gameses.closeDialog()"> 取消 </v-btn>
               <v-btn color="green darken-1" text @click="gameses.saveChanges()"> 保存 </v-btn>
-              <v-btn color="red darken-1" text @click="gameses.closeDialog()"> 取消 </v-btn>
-              <v-btn color="green darken-1" text @click="gameses.saveChanges()"> 保存 </v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -46,7 +44,6 @@
       <h3 class="toolTitle">Save 转换</h3>
       <div class="toolContent d-flex flex-row justify-space-between align-center px-2 mb-8">
         <div class="text">
-          转换为 <span class="text-primary">{{ isMP ? '单人' : '多人' }}-游戏</span> 格式:
           转换为 <span class="text-primary">{{ isMP ? '单人' : '多人' }}-游戏</span> 格式:
         </div>
         <v-spacer></v-spacer>
@@ -121,7 +118,7 @@
         <v-text-field
           hide-details="true"
           density="comfortable"
-          label="输入钱数量"
+          label="输入钱的数量"
           variant="outlined"
           style="color: white; min-width: 140px"
           v-model="money.inputVal.value"
@@ -136,7 +133,6 @@
           color="secondary"
           class="py-5"
         >
-          应用
           应用
         </v-btn>
       </div>
