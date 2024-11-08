@@ -1,7 +1,7 @@
 <template>
   <v-card elevation="1" class="pb-4">
     <v-card-header class="flex-column align-center">
-      <v-card-title> Export from file </v-card-title>
+      <v-card-title> 文件导出 </v-card-title>
     </v-card-header>
     <v-sheet class="d-flex flex-column align-center">
       <!-- preview image -->
@@ -10,7 +10,7 @@
         class="d-flex flex-row justify-center align-center mt-2 px-4"
         style="width: 100%"
       >
-        <div class="d-flex flex-row justify-center align-center">Preview Image</div>
+        <div class="d-flex flex-row justify-center align-center">预览图片</div>
         <v-spacer></v-spacer>
         <v-icon title="Download" class="iconButton" color="secondary" @click="downloadImage()">
           mdi-file-download-outline

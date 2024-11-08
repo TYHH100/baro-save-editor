@@ -60,7 +60,7 @@
     <v-card class="d-flex flex-column mainCard" style="width: 100%; height: 100%">
       <v-card-title style="background-color: rgb(var(--v-theme-primary))">
         <span class="text-h4"
-          >Editing <span class="text-black">{{ charClone?.attributes?.name }}</span></span
+          >编辑 <span class="text-black">{{ charClone?.attributes?.name }}</span></span
         >
       </v-card-title>
       <v-card-text v-if="charClone" class="d-flex flex-grow-1">
@@ -68,12 +68,12 @@
           <v-col>
             <v-card elevation="1">
               <v-card-title>
-                <span class="text-h4">General</span>
+                <span class="text-h4">通用</span>
               </v-card-title>
               <v-card-text class="charEditCardText">
                 <div>
                   <v-text-field
-                    label="Name"
+                    label="名字"
                     variant="outlined"
                     style="color: white; min-width: 200px"
                     class="mb-4 mt-3"
@@ -99,22 +99,37 @@
           <v-col>
             <v-card elevation="1">
               <v-card-title>
-                <span class="text-h4">Job &amp; Skills</span>
+                <span class="text-h4">职业 &amp; 技能</span>
               </v-card-title>
               <v-card-text class="charEditCardText">
                 <div>
-                  <div class="text-h5">Job:</div>
+                  <div class="text-h5">职业:</div>
                   <select :class="cloneJob.attributes.identifier" v-model="cloneJob.attributes.identifier">
-                    <option class="captain" value="captain">Captain</option>
-                    <option class="securityofficer" value="securityofficer">Security Officer</option>
-                    <option class="medicaldoctor" value="medicaldoctor">Medical Doctor</option>
-                    <option class="engineer" value="engineer">Engineer</option>
-                    <option class="mechanic" value="mechanic">Mechanic</option>
-                    <option class="assistant" value="assistant">Assistant</option>
+                    <option class="captain" value="captain">船长</option>
+                    <option class="securityofficer" value="securityofficer">安全官</option>
+                    <option class="medicaldoctor" value="medicaldoctor">医生</option>
+                    <option class="engineer" value="engineer">工程师</option>
+                    <option class="mechanic" value="mechanic">机修工</option>
+                    <option class="assistant" value="assistant">助手</option>
+                    <option class="admiral" value="admiral">指挥官(模组)</option>
+                    <option class="Magician" value="Magician">魔法使(模组)</option>
+                    <option class="realme" value="realme">「真我」(模组)</option>
+                    <option class="M200" value="M200">战术人形M200(模组)</option>
+                    <option class="Amiya" value="Amiya">阿米娅(模组)</option>
+                    <option class="BIANCA" value="BIANCA">比安卡·深痕(模组)</option>
+                    <option class="ForceWarrior" value="ForceWarrior">原力武士(模组)</option>
+                    <option class="synth" value="synth">合成人(模组)</option>
+                    <option class="blade" value="blade">Blade(模组)</option>
+                    <option class="Kaltsit" value="Kaltsit">凯尔希(模组)</option>
+                    <option class="diver" value="diver">The Diver(模组)</option>
+                    <option class="harlequin" value="harlequin">Harlequin(模组)</option>
+                    <option class="acolyte" value="acolyte">Acolyte(模组)</option>
+                    <option class="v_scientist" value="v_scientist">Scientist(模组)</option>
+                    <option class="separatist" value="separatist">Separatist(模组)</option>
                   </select>
                 </div>
                 <div>
-                  <div class="text-h5">Skills</div>
+                  <div class="text-h5">技能</div>
                   <div>
                     <div v-for="skill of cloneJob.elements" :key="skill.attributes.identifier">
                       <div>{{ skill.attributes.identifier }}</div>
@@ -130,8 +145,8 @@
       </v-card-text>
       <v-card-actions style="flex: 0 1 auto">
         <v-spacer></v-spacer>
-        <v-btn color="red darken-1" text @click="editDialogClose()"> Cancel </v-btn>
-        <v-btn color="green darken-1" text @click="editDialogSave()"> Save </v-btn>
+        <v-btn color="red darken-1" text @click="editDialogClose()"> 取消 </v-btn>
+        <v-btn color="green darken-1" text @click="editDialogSave()"> 保存 </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -610,5 +625,57 @@ option {
 
 .assistant {
   color: #f8f8f8;
+}
+
+.admiral {
+  color: #0bff85;
+}
+
+.Magician {
+  color: #0bff85;
+}
+
+.realme {
+  color: #0bff85;
+}
+
+.M200 {
+  color: #0bff85;
+}
+
+.Amiya {
+  color: #0bff85;
+}
+
+.BIANCA {
+  color: #0bff85;
+}
+
+.ForceWarrior {
+  color: #0bff85;
+}
+
+.synth {
+  color: #0bff85;
+}
+
+.blade {
+  color: #0bff85;
+}
+
+.Kaltsit {
+  color: #0bff85;
+}
+
+.diver {
+  color: #0bff85;
+}
+
+.harlequin {
+  color: #0bff85;
+}
+
+.acolvte {
+  color: #0bff85;
 }
 </style>

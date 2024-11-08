@@ -1,21 +1,21 @@
 <template>
   <v-card elevation="1" class="pb-2">
     <v-card-header class="flex-column align-center">
-      <v-card-title> Wire Hider </v-card-title>
+      <v-card-title> 导线隐藏 </v-card-title>
     </v-card-header>
     <v-sheet class="mb-2 px-4 d-flex flex-row justify-center">
       <select v-model="selectedWireType" class="px-2">
-        <option value="all">all</option>
-        <option value="whitewire">white</option>
-        <option value="redwire">red</option>
-        <option value="bluewire">blue</option>
-        <option value="yellowwire">yellow</option>
-        <option value="greenwire">green</option>
-        <option value="blackwire">black</option>
-        <option value="brownall">brown</option>
+        <option value="all">全部</option>
+        <option value="whitewire">白色</option>
+        <option value="redwire">红色</option>
+        <option value="bluewire">蓝色</option>
+        <option value="yellowwire">橙色</option>
+        <option value="greenwire">绿色</option>
+        <option value="blackwire">黑色</option>
+        <option value="brownall">棕色</option>
       </select>
-      <v-btn @click="hideWires" variant="outlined" color="secondary" class="mx-2">Hide</v-btn>
-      <v-btn @click="unhideWires" variant="outlined" color="secondary">Unhide</v-btn>
+      <v-btn @click="hideWires" variant="outlined" color="secondary" class="mx-2">隐藏</v-btn>
+      <v-btn @click="unhideWires" variant="outlined" color="secondary">取消隐藏</v-btn>
     </v-sheet>
   </v-card>
 </template>

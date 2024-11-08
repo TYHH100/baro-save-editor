@@ -23,7 +23,7 @@
         <v-dialog class="fullscreen" v-model="gameses.dialog.value" fullscreen>
           <v-card class="d-flex flex-column" style="width: 100%; height: 100%">
             <v-card-title>
-              <span class="text-h5">编辑 gamesession.xml</span>
+              <span class="text-h5">编辑 gamesession.xml Ctrl+F搜索</span>
             </v-card-title>
             <v-card-text class="d-flex flex-grow-1">
               <textarea
@@ -118,7 +118,7 @@
         <v-text-field
           hide-details="true"
           density="comfortable"
-          label="Current Money"
+          label="输入钱数量"
           variant="outlined"
           style="color: white; min-width: 140px"
           v-model="money.inputVal.value"
@@ -175,7 +175,7 @@ function moneySetup() {
       store.getters.campaign.attributes.money = inputVal.value
       store.dispatch('showAlert', {
         type: 'success',
-        text: `Set current money to "${inputVal.value}".`,
+        text: `当前钱数量设置为 "${inputVal.value}".`,
       })
     } else
       store.dispatch('showAlert', {

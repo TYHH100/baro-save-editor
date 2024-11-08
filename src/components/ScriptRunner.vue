@@ -1,7 +1,7 @@
 <template>
   <v-card elevation="1" class="pb-2">
     <v-card-header class="flex-column align-center">
-      <v-card-title> Run Script </v-card-title>
+      <v-card-title> 运行脚本 </v-card-title>
     </v-card-header>
     <v-sheet class="mb-2 d-flex flex-column justify-center align-center px-4">
       <textarea v-model="areaText" spellcheck="false" class="textArea px-2 mx-0"></textarea>
