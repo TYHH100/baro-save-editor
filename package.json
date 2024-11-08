@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@mdi/font": "^6.1.95",
-    "baro-save-editor": "file:",
     "buffer": "^6.0.3",
     "core-js": "^3.17.2",
     "fflate": "^0.7.1",
