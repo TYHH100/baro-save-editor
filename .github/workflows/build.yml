@@ -17,7 +17,6 @@ jobs:
           uses: actions/setup-node@v4
           with: 
             node-version: 16.6.1
-        - run: rm -rf dist
         - run: npm install
         - run: npm run build
 
