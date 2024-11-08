@@ -24,7 +24,7 @@ export default {
       eval(this.areaText)
       this.$store.dispatch('showAlert', {
         type: 'success',
-        text: `成功运行脚本(检查浏览器控制台)`,
+        text: `成功运行脚本(请查看浏览器控制台)`,
       })
     },
   },
